@@ -10,7 +10,6 @@ import Foundation
 struct ComicsData: Codable {
     
     let num: Int
-    let year: String
     let title: String
     let alt: String
     let img: String

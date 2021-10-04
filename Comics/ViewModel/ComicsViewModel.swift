@@ -11,12 +11,11 @@ import SwiftUI
 class ComicsViewModel: ObservableObject {
     
     @Published var num: Int = 123
-    @Published var year: String = "year"
     @Published var title: String = "title"
     @Published var alt: String = "alt"
     @Published var img: String = "img"
     
-    var model: randomUrlModel = randomUrlModel()
+    var model: RandomUrlModel = RandomUrlModel()
     
     
     init(){
@@ -42,7 +41,6 @@ class ComicsViewModel: ObservableObject {
                             let results = try decoder.decode(ComicsData.self, from: safeData)
                             DispatchQueue.main.async { [weak self] in
                                 self?.num = results.num
-                                self?.year = results.year
                                 self?.title = results.title
                                 self?.alt = results.alt
                                 self?.img = results.img

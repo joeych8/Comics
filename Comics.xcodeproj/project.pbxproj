@@ -22,7 +22,7 @@
 		D47E41CC26FDD219008E0286 /* ComicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E41CB26FDD219008E0286 /* ComicsData.swift */; };
 		D47E41D126FDD86A008E0286 /* ComicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E41D026FDD86A008E0286 /* ComicsViewModel.swift */; };
 		D47E41D426FDDFEF008E0286 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D47E41D326FDDFEF008E0286 /* SDWebImageSwiftUI */; };
-		D4EE44B527072F1F008CC523 /* randomUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE44B427072F1F008CC523 /* randomUrlModel.swift */; };
+		D4EE44B527072F1F008CC523 /* RandomUrlModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE44B427072F1F008CC523 /* RandomUrlModel.swift */; };
 		D4EE44B827072F81008CC523 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE44B727072F81008CC523 /* EndPoint.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +60,7 @@
 		D47E41BB26FDB4BF008E0286 /* ComicsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D47E41CB26FDD219008E0286 /* ComicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsData.swift; sourceTree = "<group>"; };
 		D47E41D026FDD86A008E0286 /* ComicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsViewModel.swift; sourceTree = "<group>"; };
-		D4EE44B427072F1F008CC523 /* randomUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomUrlModel.swift; sourceTree = "<group>"; };
+		D4EE44B427072F1F008CC523 /* RandomUrlModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUrlModel.swift; sourceTree = "<group>"; };
 		D4EE44B727072F81008CC523 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D47E41CB26FDD219008E0286 /* ComicsData.swift */,
-				D4EE44B427072F1F008CC523 /* randomUrlModel.swift */,
+				D4EE44B427072F1F008CC523 /* RandomUrlModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4EE44B827072F81008CC523 /* EndPoint.swift in Sources */,
-				D4EE44B527072F1F008CC523 /* randomUrlModel.swift in Sources */,
+				D4EE44B527072F1F008CC523 /* RandomUrlModel.swift in Sources */,
 				D47E41CC26FDD219008E0286 /* ComicsData.swift in Sources */,
 				D47E41D126FDD86A008E0286 /* ComicsViewModel.swift in Sources */,
 				D47E41A126FDB4BD008E0286 /* ContentView.swift in Sources */,

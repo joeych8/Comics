@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct randomUrlModel{
+struct RandomUrlModel{
     var currentUrl: String = EndPoint.todayComic
     
     mutating func updateUrl(){
