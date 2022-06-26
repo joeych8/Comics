@@ -7,22 +7,28 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Firebase
 
 
 
 struct ContentView: View {
     
     @ObservedObject var viewModel = ComicsViewModel()
+    @ObservedObject var utils = fireBaseUtils()
     
     var body: some View {
+        
         ZStack {
-            Color.gray.edgesIgnoringSafeArea(.all)
-            
+            Color.gray
+                .edgesIgnoringSafeArea(.all)
             VStack(){
-                Text("No:\(viewModel.num.description)")
-                    .font(.largeTitle)
-                    .padding(.top,35)
-                
+                HStack{
+                    Spacer()
+                    Text("No:\(viewModel.num.description)")
+                        .font(.largeTitle)
+                        .padding(.top,35)
+                    Spacer()
+                }
                 
                 Text(viewModel.title)
                     .font(.largeTitle .bold())
@@ -38,24 +44,42 @@ struct ContentView: View {
                 
                 Text(viewModel.alt)
                     .font(.system(size: 20))
+                    .padding(.horizontal, 5)
                 
                 Spacer()
-                
-                Button {
+                VStack{
+                    Button{
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            utils.checkForUpdate()
+                        }
+                    } label: {
+                        Image(systemName: "icloud.and.arrow.down")
+                            .resizable()
+                            .frame(width: 90, height: 70, alignment: .center)
+                    }
                     
-                    viewModel.callModel()
-                    
-                } label: {
-                    Image(systemName: "arrow.forward.square.fill")
-                        .resizable()
-                        .frame(width: 90, height: 70, alignment: .center)
+                    Button {
+                        
+                        viewModel.callModel()
+                        
+                    } label: {
+                        Image(systemName: "arrow.forward.square.fill")
+                            .resizable()
+                            .frame(width: 90, height: 70, alignment: .center)
+                    }
+                    .padding(.bottom,30)
                 }
-                .padding(.bottom,30)
             }
+            .padding()
+            .edgesIgnoringSafeArea(.all)
         }
-        //        .onAppear {
-        //            viewModel.fetchData() //test onAppear
-        //        }
+        .onAppear {
+            //viewModel.fetchData() //test onAppear
+            //            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            //                utils.checkForUpdate()
+            //            }
+            
+        }
     }
 }
 
