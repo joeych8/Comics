@@ -16,4 +16,5 @@ Was also being used to test Firebase app distribution.
 ## Features
 
 - Firebase distribution
+- API
 - Lottie animation
